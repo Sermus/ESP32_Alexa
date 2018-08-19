@@ -21,7 +21,7 @@
 
 #include "spiram_fifo.h"
 #include "spiram.h"
-#include "playerconfig.h"
+//#include "playerconfig.h"
 
 #define SPIREADSIZE 64
 
@@ -35,7 +35,7 @@ static long fifoOvfCnt, fifoUdrCnt;
 
 //Low watermark where we restart the reader thread.
 #define FIFO_LOWMARK (112*1024)
-
+#define FAKE_SPI_BUFF
 #ifdef FAKE_SPI_BUFF
 //Re-define a bunch of things so we use the internal buffer
 #undef SPIRAMSIZE
